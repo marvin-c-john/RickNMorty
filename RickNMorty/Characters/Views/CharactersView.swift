@@ -11,9 +11,14 @@ struct CharactersView: View {
     var body: some View {
         NavigationView{
             ScrollView{
-                VStack{
-                    CardView()
+                LazyVStack{
+                    ForEach(0...10, id: \.self) {_ in
+                        CardView()
+                            .padding(.vertical, 5)
+                    }
+                    
                 }
+                .padding(.top)
             }
             .navigationTitle("Characters")
         }

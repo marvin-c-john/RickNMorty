@@ -14,7 +14,7 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(.darkslategray)
                     .frame(height: 130)
-                    .padding()
+                    .padding(.horizontal)
 
                     .overlay(alignment: .leading) {
                         // Image
@@ -44,7 +44,7 @@ struct CardView: View {
                 }
                 .foregroundColor(.white)
                 
-                Text("Human")
+                Text("Female")
                     .font(.caption)
                     .foregroundStyle(.gray)
                     .fontWeight(.semibold)
