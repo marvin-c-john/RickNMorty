@@ -49,6 +49,7 @@ struct CardView: View {
                 Text(character.name)
                     .font(.headline)
                     .foregroundStyle(.white)
+                    .frame(width: 100, alignment: .leading)
                 
                 HStack{
                     Circle()
@@ -63,13 +64,15 @@ struct CardView: View {
                         .fontWeight(.semibold)
                 }
                 .foregroundColor(.white)
+                .frame(width: 150, alignment: .leading)
                 
                 Text(character.gender)
                     .font(.caption)
                     .foregroundStyle(.gray)
                     .fontWeight(.semibold)
             }
-            .offset(x: 60)
+            .offset(x: 90)
+           
         }
         
     }
