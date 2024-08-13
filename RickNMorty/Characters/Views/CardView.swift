@@ -36,6 +36,11 @@ struct CardView: View {
                             .frame(height: 150)
                             .frame(width: UIScreen.main.bounds.height / 5)
                             .padding()
+                        } else {
+                            Color.gray // Platzhalter, wenn URL ungültig ist
+                                .frame(height: 130)
+                                .frame(width: UIScreen.main.bounds.height / 5)
+                                .padding()
                         }
                         
                     }

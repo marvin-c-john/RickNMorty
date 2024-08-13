@@ -11,7 +11,7 @@ import SwiftUI
 struct RickNMortyApp: App {
     var body: some Scene {
         WindowGroup {
-            CharactersView(vm: CharacterViewModel(), character: MockData.character[0])
+            CharactersView(vm: CharacterViewModel())
         }
     }
 }

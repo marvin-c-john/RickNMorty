@@ -7,24 +7,29 @@
 
 import Foundation
 
-class CharacterViewModel: ObservableObject{
+class CharacterViewModel: ObservableObject {
     @Published var characters: [Character] = []
     @Published var errorMessage: String?
-    
+
     private let characterService: CharacterNetworkService
     
     init(characterService: CharacterNetworkService = CharacterNetworkService.shared) {
-          self.characterService = characterService
-      }
+        self.characterService = characterService
+    }
     
     func loadCharacters() async {
         do {
-            characters = try await characterService.getAllCharacters()
+            let characters = try await characterService.getAllCharacters()
+            DispatchQueue.main.async {
+                self.characters = characters
+            }
         } catch {
-            if let networkError = error as? NetworkError{
-                errorMessage = networkError.localizedDescription
-            } else {
-                errorMessage = "An unexpected error occurred."
+            DispatchQueue.main.async {
+                if let networkError = error as? NetworkError {
+                    self.errorMessage = networkError.localizedDescription
+                } else {
+                    self.errorMessage = "An unexpected error occurred."
+                }
             }
         }
     }

@@ -8,25 +8,29 @@
 import SwiftUI
 
 struct CharactersView: View {
-    @ObservedObject var vm : CharacterViewModel
-    let character: Character
+    @ObservedObject var vm: CharacterViewModel
     var body: some View {
         NavigationView{
             ScrollView{
                 LazyVStack{
-                    ForEach(0...10, id: \.self) {_ in
+                    ForEach(vm.characters) { character in
                         CardView(character: character)
-                            .padding(.vertical, 5)
+                            .padding(.vertical, 7)
                     }
                     
                 }
                 .padding(.top)
             }
             .navigationTitle("Characters")
+            .onAppear{
+                Task{
+                  await vm.loadCharacters()
+                }
+            }
         }
     }
 }
 
 #Preview {
-    CharactersView(vm: CharacterViewModel(), character: MockData.character[0])
+    CharactersView(vm: CharacterViewModel())
 }
