@@ -18,6 +18,7 @@
 		CC311BE62C6BAF1800460A0F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BE52C6BAF1800460A0F /* NetworkError.swift */; };
 		CC311BEA2C6BB37D00460A0F /* CharacterNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BE92C6BB37D00460A0F /* CharacterNetworkService.swift */; };
 		CC311BED2C6BBA1400460A0F /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BEC2C6BBA1400460A0F /* CharacterViewModel.swift */; };
+		CC311BF22C6C045900460A0F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BF12C6C045900460A0F /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CC311BE52C6BAF1800460A0F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		CC311BE92C6BB37D00460A0F /* CharacterNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNetworkService.swift; sourceTree = "<group>"; };
 		CC311BEC2C6BBA1400460A0F /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		CC311BF12C6C045900460A0F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +150,17 @@
 		CC311BEF2C6C03C900460A0F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				CC311BF02C6C043F00460A0F /* Views */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		CC311BF02C6C043F00460A0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC311BF12C6C045900460A0F /* SearchView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC311BF22C6C045900460A0F /* SearchView.swift in Sources */,
 				CC311BDC2C6A6DDE00460A0F /* CardView.swift in Sources */,
 				CC311BED2C6BBA1400460A0F /* CharacterViewModel.swift in Sources */,
 				CC311BE12C6B9F4000460A0F /* CharactersView.swift in Sources */,

@@ -15,6 +15,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("Characters", systemImage: "person" )
                 }
+            
+            SearchView()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass" )
+                }
         }
         .tint(.gray)
     }
