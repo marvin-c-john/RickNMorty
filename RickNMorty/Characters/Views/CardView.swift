@@ -25,7 +25,7 @@ struct CardView: View {
                             .padding()
                     }
             }
-            VStack(alignment: .leading, spacing: 15) {
+            VStack(alignment: .leading, spacing: 20) {
                 Text("Summer Smith")
                     .font(.headline)
                 .foregroundStyle(.white)
@@ -49,7 +49,7 @@ struct CardView: View {
                     .foregroundStyle(.gray)
                     .fontWeight(.semibold)
             }
-            .offset(x: 60, y: -20)
+            .offset(x: 60, y: -15)
         }
         
     }
