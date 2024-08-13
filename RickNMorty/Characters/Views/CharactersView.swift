@@ -22,6 +22,7 @@ struct CharactersView: View {
                 .padding(.top)
             }
             .navigationTitle("Characters")
+            .background(Color.darkslategray2)
             .onAppear{
                 Task{
                   await vm.loadCharacters()

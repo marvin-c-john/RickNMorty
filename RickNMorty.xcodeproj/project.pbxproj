@@ -65,7 +65,7 @@
 		CC311BBF2C6A612000460A0F /* RickNMorty */ = {
 			isa = PBXGroup;
 			children = (
-				CC311BEE2C6BBCAE00460A0F /* E */,
+				CC311BEF2C6C03C900460A0F /* Search */,
 				CC311BE42C6BAF0C00460A0F /* Error */,
 				CC311BD72C6A6D7200460A0F /* Characters */,
 				CC311BC02C6A612000460A0F /* RickNMortyApp.swift */,
@@ -145,11 +145,11 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		CC311BEE2C6BBCAE00460A0F /* E */ = {
+		CC311BEF2C6C03C900460A0F /* Search */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = E;
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

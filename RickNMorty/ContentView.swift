@@ -11,8 +11,12 @@ struct ContentView: View {
     @StateObject var characterViewModel = CharacterViewModel()
     var body: some View {
         TabView{
-            
+            CharactersView(vm: characterViewModel)
+                .tabItem {
+                    Label("Characters", systemImage: "person" )
+                }
         }
+        .tint(.gray)
     }
 }
 

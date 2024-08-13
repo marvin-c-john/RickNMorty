@@ -48,6 +48,7 @@ struct CardView: View {
             VStack(alignment: .leading, spacing: 20) {
                 Text(character.name)
                     .font(.headline)
+                    .bold()
                     .foregroundStyle(.white)
                     .frame(width: 100, alignment: .leading)
                 
