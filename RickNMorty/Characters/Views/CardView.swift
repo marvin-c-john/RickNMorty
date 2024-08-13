@@ -13,13 +13,13 @@ struct CardView: View {
             VStack{
                 RoundedRectangle(cornerRadius: 20)
                     .fill(.darkslategray)
-                    .frame(height: 200)
+                    .frame(height: 130)
                     .padding()
 
                     .overlay(alignment: .leading) {
                         // Image
                         Rectangle()
-                            .frame(height: 200)
+                            .frame(height: 130)
                             .frame(width: UIScreen.main.bounds.height / 5)
                             .cornerRadius(20,  corners: [.topLeft, .bottomLeft])
                             .padding()
@@ -49,7 +49,7 @@ struct CardView: View {
                     .foregroundStyle(.gray)
                     .fontWeight(.semibold)
             }
-            .offset(x: 60, y: -15)
+            .offset(x: 60)
         }
         
     }

@@ -13,6 +13,7 @@
 		CC311BC82C6A612100460A0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC311BC72C6A612100460A0F /* Preview Assets.xcassets */; };
 		CC311BDC2C6A6DDE00460A0F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BDB2C6A6DDE00460A0F /* CardView.swift */; };
 		CC311BDF2C6A6E2400460A0F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BDE2C6A6E2400460A0F /* Card.swift */; };
+		CC311BE12C6B9F4000460A0F /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BE02C6B9F4000460A0F /* CharactersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		CC311BC72C6A612100460A0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC311BDB2C6A6DDE00460A0F /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CC311BDE2C6A6E2400460A0F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CC311BE02C6B9F4000460A0F /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				CC311BDB2C6A6DDE00460A0F /* CardView.swift */,
+				CC311BE02C6B9F4000460A0F /* CharactersView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC311BDC2C6A6DDE00460A0F /* CardView.swift in Sources */,
+				CC311BE12C6B9F4000460A0F /* CharactersView.swift in Sources */,
 				CC311BC32C6A612000460A0F /* ContentView.swift in Sources */,
 				CC311BC12C6A612000460A0F /* RickNMortyApp.swift in Sources */,
 				CC311BDF2C6A6E2400460A0F /* Card.swift in Sources */,
