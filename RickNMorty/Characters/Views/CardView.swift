@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardView: View {
-
+    
     let character: Character
     
     var body: some View {
@@ -16,28 +16,40 @@ struct CardView: View {
             VStack{
                 RoundedRectangle(cornerRadius: 20)
                     .fill(.darkslategray)
-                    .frame(height: 130)
+                    .frame(height: 150)
                     .padding(.horizontal)
-
+                
                     .overlay(alignment: .leading) {
                         // Image
-                        Rectangle()
-                            .frame(height: 130)
+                        
+                        if let url = URL(string: character.image) {
+                            AsyncImage(url: url) { image in
+                                image
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(height: 150)
+                                    .frame(width: 180)
+                                    .cornerRadius(20, corners: [.topLeft, .bottomLeft])
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            .frame(height: 150)
                             .frame(width: UIScreen.main.bounds.height / 5)
-                            .cornerRadius(20,  corners: [.topLeft, .bottomLeft])
                             .padding()
+                        }
+                        
                     }
             }
             VStack(alignment: .leading, spacing: 20) {
                 Text(character.name)
                     .font(.headline)
-                .foregroundStyle(.white)
+                    .foregroundStyle(.white)
                 
                 HStack{
                     Circle()
                         .fill(Color.green)
                         .frame(width: 10, height: 10)
-                        
+                    
                     Text("\(character.status) -")
                         .font(.caption)
                         .fontWeight(.semibold)
@@ -68,3 +80,5 @@ extension View {
 #Preview {
     CardView(character: MockData.character[0])
 }
+
+
