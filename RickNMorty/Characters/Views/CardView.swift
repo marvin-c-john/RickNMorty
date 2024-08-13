@@ -11,6 +11,19 @@ struct CardView: View {
     
     let character: Character
     
+    
+    var statusColor: Color {
+        switch character.status.lowercased() {
+        case "alive":
+            return .green
+        case "dead":
+            return .red
+        default:
+            return .gray
+        }
+    }
+    
+    
     var body: some View {
         ZStack(alignment: .center) {
             VStack{
@@ -54,7 +67,7 @@ struct CardView: View {
                 
                 HStack{
                     Circle()
-                        .fill(Color.green)
+                        .fill(statusColor)
                         .frame(width: 10, height: 10)
                     
                     Text("\(character.status) -")
