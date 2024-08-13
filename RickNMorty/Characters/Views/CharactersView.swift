@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct CharactersView: View {
+    @ObservedObject var vm : CharacterViewModel
+    let character: Character
     var body: some View {
         NavigationView{
             ScrollView{
                 LazyVStack{
                     ForEach(0...10, id: \.self) {_ in
-                        CardView()
+                        CardView(character: character)
                             .padding(.vertical, 5)
                     }
                     
@@ -26,5 +28,5 @@ struct CharactersView: View {
 }
 
 #Preview {
-    CharactersView()
+    CharactersView(vm: CharacterViewModel(), character: MockData.character[0])
 }

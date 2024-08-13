@@ -14,6 +14,10 @@
 		CC311BDC2C6A6DDE00460A0F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BDB2C6A6DDE00460A0F /* CardView.swift */; };
 		CC311BDF2C6A6E2400460A0F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BDE2C6A6E2400460A0F /* Card.swift */; };
 		CC311BE12C6B9F4000460A0F /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BE02C6B9F4000460A0F /* CharactersView.swift */; };
+		CC311BE32C6BAD2700460A0F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BE22C6BAD2700460A0F /* Character.swift */; };
+		CC311BE62C6BAF1800460A0F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BE52C6BAF1800460A0F /* NetworkError.swift */; };
+		CC311BEA2C6BB37D00460A0F /* CharacterNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BE92C6BB37D00460A0F /* CharacterNetworkService.swift */; };
+		CC311BED2C6BBA1400460A0F /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC311BEC2C6BBA1400460A0F /* CharacterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		CC311BDB2C6A6DDE00460A0F /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CC311BDE2C6A6E2400460A0F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CC311BE02C6B9F4000460A0F /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		CC311BE22C6BAD2700460A0F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		CC311BE52C6BAF1800460A0F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CC311BE92C6BB37D00460A0F /* CharacterNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterNetworkService.swift; sourceTree = "<group>"; };
+		CC311BEC2C6BBA1400460A0F /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,8 @@
 		CC311BBF2C6A612000460A0F /* RickNMorty */ = {
 			isa = PBXGroup;
 			children = (
+				CC311BEE2C6BBCAE00460A0F /* E */,
+				CC311BE42C6BAF0C00460A0F /* Error */,
 				CC311BD72C6A6D7200460A0F /* Characters */,
 				CC311BC02C6A612000460A0F /* RickNMortyApp.swift */,
 				CC311BC22C6A612000460A0F /* ContentView.swift */,
@@ -79,6 +89,8 @@
 			children = (
 				CC311BDD2C6A6DF800460A0F /* Models */,
 				CC311BD82C6A6DB700460A0F /* Views */,
+				CC311BEB2C6BB9A000460A0F /* ViewModels */,
+				CC311BE72C6BB31C00460A0F /* Networking */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -96,8 +108,48 @@
 			isa = PBXGroup;
 			children = (
 				CC311BDE2C6A6E2400460A0F /* Card.swift */,
+				CC311BE22C6BAD2700460A0F /* Character.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CC311BE42C6BAF0C00460A0F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				CC311BE52C6BAF1800460A0F /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		CC311BE72C6BB31C00460A0F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CC311BE82C6BB36400460A0F /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CC311BE82C6BB36400460A0F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CC311BE92C6BB37D00460A0F /* CharacterNetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CC311BEB2C6BB9A000460A0F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CC311BEC2C6BBA1400460A0F /* CharacterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CC311BEE2C6BBCAE00460A0F /* E */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = E;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,10 +223,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC311BDC2C6A6DDE00460A0F /* CardView.swift in Sources */,
+				CC311BED2C6BBA1400460A0F /* CharacterViewModel.swift in Sources */,
 				CC311BE12C6B9F4000460A0F /* CharactersView.swift in Sources */,
 				CC311BC32C6A612000460A0F /* ContentView.swift in Sources */,
+				CC311BE32C6BAD2700460A0F /* Character.swift in Sources */,
 				CC311BC12C6A612000460A0F /* RickNMortyApp.swift in Sources */,
+				CC311BE62C6BAF1800460A0F /* NetworkError.swift in Sources */,
 				CC311BDF2C6A6E2400460A0F /* Card.swift in Sources */,
+				CC311BEA2C6BB37D00460A0F /* CharacterNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

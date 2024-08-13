@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CardView: View {
+
+    let character: Character
+    
     var body: some View {
         ZStack(alignment: .center) {
             VStack{
@@ -26,7 +29,7 @@ struct CardView: View {
                     }
             }
             VStack(alignment: .leading, spacing: 20) {
-                Text("Summer Smith")
+                Text(character.name)
                     .font(.headline)
                 .foregroundStyle(.white)
                 
@@ -35,16 +38,16 @@ struct CardView: View {
                         .fill(Color.green)
                         .frame(width: 10, height: 10)
                         
-                    Text("Alive -")
+                    Text("\(character.status) -")
                         .font(.caption)
                         .fontWeight(.semibold)
-                    Text("Human")
+                    Text(character.species)
                         .font(.caption)
                         .fontWeight(.semibold)
                 }
                 .foregroundColor(.white)
                 
-                Text("Female")
+                Text(character.gender)
                     .font(.caption)
                     .foregroundStyle(.gray)
                     .fontWeight(.semibold)
@@ -63,5 +66,5 @@ extension View {
 }
 
 #Preview {
-    CardView()
+    CardView(character: MockData.character[0])
 }
